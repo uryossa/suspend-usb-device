@@ -176,6 +176,7 @@ EOF
         exit 3
     fi
 
+    # for older kernel like centos6
     [[ $VERBOSE == 1 ]] && echo "Suspending $DEVICE by writing to $POWER_DIR/level"
     echo '0' > "$POWER_DIR/autosuspend"
     echo 'auto' > "$POWER_DIR/level"
